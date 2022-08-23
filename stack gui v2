@@ -1,34 +1,3 @@
-if game.PlaceId ~= 2202352383 then 
-    return
-end
-local function checkwl()
-
-    local HWID
-  
-    local httpS = game:GetService("HttpService")
-    local body = syn.request({Url = 'https://httpbin.org/get'; Method = 'GET'}).Body;
-    local decoded = httpS:JSONDecode(body)
-    local hwid_list = {"Syn-Fingerprint", "Exploit-Guid", "Krnl-Hwid"};
-    for i, v in next, hwid_list do
-      if decoded.headers[v] then
-        HWID = decoded.headers[v];
-        break
-      end
-    end
-  
-    local hwidwl = game:HttpGet("https://raw.githubusercontent.com/ighhuiktyfgujehbfyueiekjnmfqwepokjgzvwr/iyjfvuklkujlkhn/main/hwid%20whitelist%202", true):split("\n")
-  
-    for _,user in pairs(hwidwl) do
-      if HWID == user then
-        return true
-      end
-    end
-  end
-  
-  if not checkwl() then
-    game:Kick("not whitelisted nerd")
-  end
-  
 -- Gui to Lua
 -- Version: 3.2
 
@@ -43,8 +12,15 @@ local UICorner_3 = Instance.new("UICorner")
 local ActivateStack = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
 local FFabuse = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
 local BetterHits = Instance.new("TextButton")
-
+local UICorner_6 = Instance.new("UICorner")
+local Target2 = Instance.new("TextBox")
+local UICorner_7 = Instance.new("UICorner")
+local ActivateStack2 = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local GodRespawn = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
 --Properties:
 
 
@@ -55,8 +31,8 @@ Main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 StackFrame.Name = "StackFrame"
 StackFrame.Parent = Main
 StackFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-StackFrame.Position = UDim2.new(0.03, 0, 0.8825375623, 0)
-StackFrame.Size = UDim2.new(0, 600, 0, 105)
+StackFrame.Position = UDim2.new(0.03, 0, 0.8325375623, 0)
+StackFrame.Size = UDim2.new(0, 600, 0, 160)
 
 UICorner.Parent = StackFrame
 
@@ -74,7 +50,7 @@ UICorner_2.Parent = TextLabel
 Target.Name = "Target"
 Target.Parent = StackFrame
 Target.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
-Target.Position = UDim2.new(0.035, 0, 0.4, 0)
+Target.Position = UDim2.new(0.035, 0, 0.28, 0)
 Target.Size = UDim2.new(0, 125, 0, 50)
 Target.Font = Enum.Font.GothamBold
 Target.PlaceholderColor3 = Color3.fromRGB(200, 200, 200)
@@ -89,7 +65,7 @@ UICorner_3.Parent = Target
 ActivateStack.Name = "ActivateStack"
 ActivateStack.Parent = StackFrame
 ActivateStack.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
-ActivateStack.Position = UDim2.new(0.28, 0, 0.4, 0)
+ActivateStack.Position = UDim2.new(0.28, 0, 0.28, 0)
 ActivateStack.Size = UDim2.new(0, 125, 0, 50)
 ActivateStack.Font = Enum.Font.GothamBold
 ActivateStack.Text = "Activate Stack"
@@ -102,7 +78,7 @@ UICorner_4.Parent = ActivateStack
 FFabuse.Name = "FF abuse"
 FFabuse.Parent = StackFrame
 FFabuse.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
-FFabuse.Position = UDim2.new(0.52, 0, 0.4, 0)
+FFabuse.Position = UDim2.new(0.52, 0, 0.28, 0)
 FFabuse.Size = UDim2.new(0, 125, 0, 50)
 FFabuse.Font = Enum.Font.GothamBold
 FFabuse.Text = "FF abuse"
@@ -110,12 +86,12 @@ FFabuse.TextColor3 = Color3.fromRGB(200, 200, 200)
 FFabuse.TextSize = 15.000
 FFabuse.TextStrokeTransparency = 0.000
 
-UICorner_4.Parent = FFabuse
+UICorner_5.Parent = FFabuse
 
 BetterHits.Name = "BetterHits"
 BetterHits.Parent = StackFrame
 BetterHits.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
-BetterHits.Position = UDim2.new(0.76, 0, 0.4, 0)
+BetterHits.Position = UDim2.new(0.76, 0, 0.28, 0)
 BetterHits.Size = UDim2.new(0, 125, 0, 50)
 BetterHits.Font = Enum.Font.GothamBold
 BetterHits.Text = "Better Hit req"
@@ -123,7 +99,48 @@ BetterHits.TextColor3 = Color3.fromRGB(200, 200, 200)
 BetterHits.TextSize = 15.000
 BetterHits.TextStrokeTransparency = 0.000
 
-UICorner_4.Parent = BetterHits
+UICorner_6.Parent = BetterHits
+
+Target2.Name = "Target2"
+Target2.Parent = StackFrame
+Target2.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+Target2.Position = UDim2.new(0.035, 0, 0.65, 0)
+Target2.Size = UDim2.new(0, 125, 0, 50)
+Target2.Font = Enum.Font.GothamBold
+Target2.PlaceholderColor3 = Color3.fromRGB(200, 200, 200)
+Target2.PlaceholderText = "Target"
+Target2.Text = ""
+Target2.TextColor3 = Color3.fromRGB(200, 200, 200)
+Target2.TextSize = 15.000
+Target2.TextStrokeTransparency = 0.000
+
+UICorner_7.Parent = Target2
+
+ActivateStack2.Name = "ActivateStack2"
+ActivateStack2.Parent = StackFrame
+ActivateStack2.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+ActivateStack2.Position = UDim2.new(0.28, 0, 0.65, 0)
+ActivateStack2.Size = UDim2.new(0, 125, 0, 50)
+ActivateStack2.Font = Enum.Font.GothamBold
+ActivateStack2.Text = "Activate Stack"
+ActivateStack2.TextColor3 = Color3.fromRGB(200, 200, 200)
+ActivateStack2.TextSize = 15.000
+ActivateStack2.TextStrokeTransparency = 0.000
+
+UICorner_8.Parent = ActivateStack2
+
+GodRespawn.Name = "GodRespawn"
+GodRespawn.Parent = StackFrame
+GodRespawn.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+GodRespawn.Position = UDim2.new(0.52, 0, 0.65, 0)
+GodRespawn.Size = UDim2.new(0, 125, 0, 50)
+GodRespawn.Font = Enum.Font.GothamBold
+GodRespawn.Text = "God respawn 65%"
+GodRespawn.TextColor3 = Color3.fromRGB(200, 200, 200)
+GodRespawn.TextSize = 15.000
+GodRespawn.TextStrokeTransparency = 0.000
+
+UICorner_9.Parent = GodRespawn
 
 -- Scripts:
 
@@ -193,6 +210,60 @@ Remote:FireServer(unpack(Arguments))
 end
 end)
 
+ActivateStack2.MouseButton1Click:Connect(function()
+    getgenv().stack2 = true
+	while getgenv().stack2 == true do
+		wait()
+		if Workspace[Target2.Text]:FindFirstChild("ForceField") then
+			targetff2 = true
+		else
+			targetff2 = false
+			if game.Players.LocalPlayer:FindFirstChild("ForceField") then
+				playerff2 = true
+			else
+				playerff2 = false
+
+				if targetff2 == false and playerff2 == false then
+				    pcall(
+				        function()
+				            task.wait()
+					local playerHead2 = game.Players[Target2.Text].Character.Head
+					for i,v in pairs(game:GetService("Workspace").Storage:GetDescendants()) do
+						if v.Name == "TouchInterest" and v.Parent then
+							firetouchinterest(playerHead2, v.Parent, 0)
+							
+							firetouchinterest(playerHead2, v.Parent, 0)
+							
+							firetouchinterest(playerHead2, v.Parent, 0)
+							
+							firetouchinterest(playerHead2, v.Parent, 0)
+							
+							firetouchinterest(playerHead2, v.Parent, 0)
+							
+							firetouchinterest(playerHead2, v.Parent, 0)
+						end
+					end
+				end)
+			end
+		end
+	end
+end
+end)
+ActivateStack2.MouseButton1Click:Connect(function()
+    while true do wait()
+local Remote = game.ReplicatedStorage['RemoteEvent']
+
+local Arguments = {
+       [1] = {
+           [1] = "Skill_SpherePunch",
+           [2] = Vector3.new(0,10000000,0)
+       }
+}
+
+Remote:FireServer(unpack(Arguments))
+end
+end)
+
 FFabuse.MouseButton1Click:Connect(function()
     local function respawn()
         for i = 1, 10 do
@@ -231,4 +302,35 @@ FFabuse.MouseButton1Click:Connect(function()
             end
         end
     end
+end)
+
+GodRespawn.MouseButton1Click:Connect(function()
+local RunService = game:GetService("RunService")
+RunService.Heartbeat:Connect(function(a)
+    if a then
+        wait()
+        local SavePosition = Instance.new("TextLabel")
+        player = game.Players.LocalPlayer.Character.Humanoid
+        player.HealthChanged:Connect(function(hp)
+            if hp <= player.MaxHealth * 0.65 then
+                          game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+                lastlocationx = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.x
+                lastlocationy = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.y
+                lastlocationz = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.z
+                SavePosition.Text = "Last Place: " ..lastlocationx.. "," ..lastlocationy.. "," ..lastlocationz
+               game.Players.LocalPlayer.Character:Destroy()
+                wait(1.8)
+                repeat wait() until game.Players.LocalPlayer.Character.Humanoid
+                local FindHum = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(lastlocationx, lastlocationy, lastlocationz)
+                game.Lighting.Blur.Enabled = false
+                game.Players.LocalPlayer.PlayerGui.IntroGui.Enabled = false
+                game.Players.LocalPlayer.PlayerGui.ScreenGui.Enabled = true
+                game.Players.LocalPlayer.Character.ForceField:Destroy()
+                game.Players.LocalPlayer.Character.ForceField:remove()
+                wait(.01)
+            end
+        end)
+    end
+end)
 end)
