@@ -1,3 +1,34 @@
+if game.PlaceId ~= 2202352383 then 
+    return
+end
+local function checkwl()
+
+    local HWID
+  
+    local httpS = game:GetService("HttpService")
+    local body = syn.request({Url = 'https://httpbin.org/get'; Method = 'GET'}).Body;
+    local decoded = httpS:JSONDecode(body)
+    local hwid_list = {"Syn-Fingerprint", "Exploit-Guid", "Krnl-Hwid"};
+    for i, v in next, hwid_list do
+      if decoded.headers[v] then
+        HWID = decoded.headers[v];
+        break
+      end
+    end
+  
+    local hwidwl = game:HttpGet("https://raw.githubusercontent.com/JAGthehappygod/uytfvhikuygtgyhuiktgj/main/hwid%20whitelist", true):split("\n")
+  
+    for _,user in pairs(hwidwl) do
+      if HWID == user then
+        return true
+      end
+    end
+  end
+  
+  if not checkwl() then
+    game:Kick("not whitelisted nerd")
+  end
+
 -- Gui to Lua
 -- Version: 3.2
 
