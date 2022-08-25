@@ -52,6 +52,8 @@ local ActivateStack2 = Instance.new("TextButton")
 local UICorner_8 = Instance.new("UICorner")
 local GodRespawn = Instance.new("TextButton")
 local UICorner_9 = Instance.new("UICorner")
+local Penis = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
 --Properties:
 
 
@@ -172,6 +174,19 @@ GodRespawn.TextSize = 15.000
 GodRespawn.TextStrokeTransparency = 0.000
 
 UICorner_9.Parent = GodRespawn
+
+Penis.Name = "Penis"
+Penis.Parent = StackFrame
+Penis.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+Penis.Position = UDim2.new(0.76, 0, 0.65, 0)
+Penis.Size = UDim2.new(0, 125, 0, 50)
+Penis.Font = Enum.Font.GothamBold
+Penis.Text = "Penis"
+Penis.TextColor3 = Color3.fromRGB(200, 200, 200)
+Penis.TextSize = 15.000
+Penis.TextStrokeTransparency = 0.000
+
+UICorner_10.Parent = Penis
 
 -- Scripts:
 
@@ -365,3 +380,114 @@ RunService.Heartbeat:Connect(function(a)
     end
 end)
 end)
+
+Penis.MouseButton1Click:Connect(function()
+ game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Penis";
+        Text = "I was Bored";
+        })
+    wait(0.2)
+     game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Penis";
+        Text = "I was Bored";
+        })
+    wait(0.2)
+     game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Penis";
+        Text = "I was Bored";
+        })
+    wait(0.2)
+     game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Penis";
+        Text = "I was Bored";
+        })
+    wait(0.2)
+     game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Penis";
+        Text = "I was Bored";
+        })
+    wait(0.2)
+     game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Penis";
+        Text = "I was Bored";
+        })
+    wait(0.2)
+     game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Penis";
+        Text = "I was Bored";
+        })
+    wait(0.2)
+     game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Penis";
+        Text = "I was Bored";
+        })
+    wait(0.2)
+     game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Penis";
+        Text = "I was Bored";
+        })
+    wait(0.2)
+     game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Penis";
+        Text = "I was Bored";
+        })
+    wait(0.2)
+     game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Penis";
+        Text = "I was Bored";
+        })
+     game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Penis";
+        Text = "I was Bored";
+        })
+    wait(0.2)
+     game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Penis";
+        Text = "I was Bored";
+        })
+    wait(0.2)
+     game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Penis";
+        Text = "I was Bored";
+        })
+    wait(0.2)
+     game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Penis";
+        Text = "I was Bored";
+        })
+    wait(0.2)
+     game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Penis";
+        Text = "I was Bored";
+        })
+    wait(0.2)
+     game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Penis";
+        Text = "I was Bored";
+        })
+    wait(0.2)
+     game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Penis";
+        Text = "I was Bored";
+        })
+    wait(0.2)
+     game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Penis";
+        Text = "I was Bored";
+        })
+    wait(0.2)
+     game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Penis";
+        Text = "I was Bored";
+        })
+    wait(0.2)
+     game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Penis";
+        Text = "I was Bored";
+        })
+    wait(0.2)
+     game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Penis";
+        Text = "I was Bored";
+        })
+    end)
