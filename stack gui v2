@@ -191,10 +191,10 @@ UICorner_10.Parent = Penis
 -- Scripts:
 
 BetterHits.MouseButton1Click:Connect(function()
-    local x,y,z = math.random(-100000,100000),math.random(-49000,-32000),math.random(-100000,100000)
+    local x,y,z = math.random(-100000,100000),math.random(-49000,-49000),math.random(-100000,100000)
 while true do
-game.Workspace.FallenPartsDestroyHeight = -50000
-    Workspace.Gravity = 0
+game.Workspace.FallenPartsDestroyHeight = 0 / 0
+    Workspace.Gravity = 40000
     while true do
     wait(0.1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,z)
