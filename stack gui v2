@@ -16,7 +16,7 @@ local function checkwl()
       end
     end
   
-    local hwidwl = game:HttpGet("https://raw.githubusercontent.com/JAGthehappygod/uytfvhikuygtgyhuiktgj/main/hwid%20whitelist", true):split("\n")
+    local hwidwl = game:HttpGet("https://raw.githubusercontent.com/ighhuiktyfgujehbfyueiekjnmfqwepokjgzvwr/iyjfvuklkujlkhn/main/hwid%20whitelist%202", true):split("\n")
   
     for _,user in pairs(hwidwl) do
       if HWID == user then
